@@ -1,0 +1,68 @@
+[package]
+name = "rust-examples"
+version = "0.1.0"
+authors = ["anuj"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rio = "0.9.4"
+extreme = ""
+libc = ""
+tokio = { version = "1.5.0", features = ["full"] }
+mio = { version = "0.7", features = ["os-poll", "net"] }
+log = "*"
+env_logger = "*"
+sled = ""
+byteorder ="*"
+zerocopy = "*"
+
+
+[[bin]]
+name = "sled"
+path = "src/sled/main.rs"
+
+[[bin]]
+name = "sled_async"
+path = "src/sled/async.rs"
+
+[[bin]]
+name = "sled_play"
+path = "src/sled/playground.rs"
+
+[[bin]]
+name = "sled_structured"
+path = "src/sled/structured.rs"
+
+[[bin]]
+name = "mio"
+path = "src/mio/main.rs"
+
+[[bin]]
+name = "mio_udp"
+path = "src/mio/tcp_server.rs"
+
+[[bin]]
+name = "mio_tcp"
+path = "src/mio/udp_server.rs"
+
+[[bin]]
+name = "tokio"
+path = "src/tokio/main.rs"
+
+[[bin]]
+name = "echo"
+path = "src/rio/async_echo.rs"
+
+[[bin]]
+name = "bench"
+path = "src/rio/http_bench.rs"
+
+[[bin]]
+name = "nop"
+path = "src/rio/nop.rs"
+
+[[bin]]
+name = "o_direct"
+path = "src/rio/o_direct.rs"
