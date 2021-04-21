@@ -1,4 +1,4 @@
-# Rust examples from several rust libraires/crates
+# Rust examples from several rust libraries/crates
 
  - Basic TCPListener
  - mio polling
